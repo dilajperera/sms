@@ -1,0 +1,45 @@
+########################################
+#### IDE specific rules:
+########################################
+.classpath
+.project
+.settings/
+target/
+*.iml
+*.idea/
+
+########################################
+#### OSX/Finder:
+########################################
+.DS_Store
+*.DS_Store
+
+########################################
+#### XCode/iOS:
+########################################
+Pods/
+xcuserdata/
+project.xcworkspace/
+veip-attendance.xcworkspace/
+*Podfile.lock
+
+########################################
+#### Python rules:
+########################################
+*.pyc
+**/build/
+**/dist/
+**/cover/
+**/.coverage
+**/Bloomworks.egg-info/
+**/*.egg*/
+
+########################################
+#### Misc/general rules:
+########################################
+*.log
+*.tlog
+*-override.properties
+*globals.js
+veip-web-openshift/overlays/
+ajcore.*.txt

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<div class="container">
+		<div ng-controller="studentCtrl">
+			<!-- std-detail is a custom directive to edit/save student details -->
+			<div ng-if="enableEditPanel" std-detail></div>
+	
+			<div class="container">
+				<div class="col-sm-10">
+					<input class="form-control" placeholder="search..." ng-model="searchText">
+				</div>
+			</div>
+			<br />
+		
+			<table class="table">
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="info" ng-repeat="std in studentList | filter:searchText">
+						<td>{{ std.firstName }}</td>
+						<td>{{ std.lastName}}</td>
+						<td>{{ std.email}}</td>
+						<td><button ng-click="renderEditPanel(std)" value="Edit"
+								class="btn btn-primary">View | Edit</button></td>
+						<td><button type="submit" ng-click="deleteStudent(std)"
+								value="Edit" class="btn btn-primary">Delete</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+		</div>
+</div>
+
