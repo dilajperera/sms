@@ -7,4 +7,5 @@ angular.module('sms-ng-app', ['controllers', 'ngRoute', 'directives']).
         }).otherwise({
             redirectTo: '/profiles'
         });
+
     });
